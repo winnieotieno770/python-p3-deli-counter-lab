@@ -8,10 +8,15 @@ def line(customer_list):
     
 def take_a_number(customer_list, customer_name):
     customer_list.append(customer_name)
-    num = len(customer_list)
+    num = customer_list.index(customer_name) + 1
     print(f"Welcome, {customer_name}. You are number {num} in line.")
 
-
-def now_serving():
-    pass
-take_a_number(["Brenda", "Anna"], "Clark")
+take_a_number(['e','f'],'g')
+def now_serving(customer_list):
+    if len(customer_list) == 0:
+        print("There is nobody waiting to be served!")
+        return
+    c  =  customer_list.pop(0)
+    print(f"Currently serving {c}.")
+    
+now_serving(['Logan', 'Avi', 'Spencer'])
